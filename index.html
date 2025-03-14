@@ -7,6 +7,11 @@
     <!-- Daisy UI & Taileind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .active{
+            background-color: #FF1F3D;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,8 +23,18 @@
     </header>
 
     <nav id="categories-container" class="flex justify-center py-5 gap-5">
-        <button class="btn btn-sm bg-[#FF1F3D]">all</button>
+        <button id="btn-all" onclick="loadVideos()" class="btn btn-sm active">all</button>
     </nav>
+
+    
+
+    <section id="videos-container" class="grid grid-cols-4 items-center w-11/12 mx-auto gap-5">
+        <div class="col-span-full flex flex-col justify-center items-center py-7 gap-5">
+            <img class="w-[120px]" src="./images/Icon.png" alt="">
+            <h2 class="text-2xl font-bold text-center">Oops!! Sorry, There is no content here</h2>
+        </div>
+        
+    </section>
 
     <script src="./script/app.js"></script>
 </body>
